@@ -1,0 +1,225 @@
+/**************/
+/* Shared CSS */
+/**************/
+
+* {
+  margin: 0;
+  padding:0;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header, footer {
+  background: black;
+  color: white;
+}
+
+h1, h2 {
+  font-family: 'Archivo Black', sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 3em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+nav li a {
+  padding: 1em;
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+nav li a.selected {
+  background: #477ecc;
+}
+
+nav li a:hover, li a:focus {
+  color: #477ecc;
+}
+
+nav li a.selected:hover, li a.selected:focus {
+  color: white;
+}
+
+.no-break {
+  display: inline-block;
+}
+
+.logo-text {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  font-size: 0.75em;
+}
+
+@media (min-width: 32em) {
+  .logo-text {
+    display: inline;
+  }
+}
+
+/*******************/
+/* Skills Page CSS */
+/*******************/
+
+#skills main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0.5em;
+  max-width: 120em;
+  margin: 0 auto;
+}
+
+#skills aside .skill-icons > i:not(:last-child) {
+  padding-right: 0.5em;
+}
+
+#skills aside .skill-icons {
+  display: none;
+}
+
+#skills aside .blurb {
+  display: none;
+}
+
+#skills .skill-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  grid-gap: 1em;
+  padding: 0.5em;
+  flex-grow: 1;
+}
+
+#skills .caption-wrapper {
+  position: relative;
+}
+
+#skills section img {
+  width: 100%;
+  opacity: 0.65;
+}
+
+#skills .caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.5em;
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65));
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Archivo Black', sans-serif;
+}
+
+#skills .rating-label {
+  font-family: 'Archivo Black', sans-serif;
+}
+
+#skills .rating .filled {
+  color: #477ecc;
+}
+
+#skills .rating .empty {
+  color: lightgrey;
+}
+
+#skills .rating i {
+  padding-left: 0.5em;
+}
+
+@media (min-width: 33em) {
+  #skills aside {
+    max-width: 32em;
+    margin: 0 auto;
+  }
+
+  #skills aside .skill-icons {
+    font-size: 1.25em;
+    display: inline;
+  }
+
+  #skills aside .blurb {
+    display: block;
+    padding: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+  }
+}
+
+@media (min-width: 64em) {
+  #skills main {
+    flex-direction: row;
+  }
+
+  #skills aside {
+    margin-right: 0.5em;
+    margin-left: 0;
+    width: 12em;
+  }
+
+  #skills aside .blurb {
+    border: none;
+  }
+}
+
+@media (min-width: 77em) {
+  #skills .skill-wrapper {
+    grid-gap: 3em;
+  }
+}
+
+/*****************/
+/* Home Page CSS */
+/*****************/
+
+#home .bg-image {
+  background-image: linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.35)), url("../images/emo_desaturated.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+#home header {
+  background: linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.35));
+}
+
+#home header a {
+  color: black;
+}
+
+#home main {
+  padding: 0.5em;
+  max-width: 30em;
+}
+
+@media (min-width: 48em) {
+  #home main h2 {
+    margin-top: 3em;
+  }
+}
+
+/* TODO: */
+/* footer */
+/* broken on my tablet?? */
+/* Change img width to max-width? */
+/* Add to git for vc? */
+/* Add blurb to mobile on skills page? */
+/* Remove flex on main element? */
