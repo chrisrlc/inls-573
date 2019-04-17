@@ -76,10 +76,32 @@ nav li a.selected:hover, li a.selected:focus {
   display: none;
 }
 
+.caption-wrapper {
+  position: relative;
+}
+
+.caption-wrapper img {
+  opacity: 0.65;
+}
+
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.5rem;
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65));
+  color: white;
+}
+
 aside {
   text-align: center;
+}
+
+aside .blurb {
   max-width: 32em;
   margin: 0 auto;
+  padding: 0.5em;
 }
 
 footer {
@@ -110,19 +132,13 @@ footer.fixed {
 }
 
 #experience main {
-  padding: 0.5em;
   max-width: 120em;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
 
-#experience aside img {
-  display: none;
-}
-
-#experience aside .blurb {
-  display: block;
+#experience aside .blurb p {
   padding: 0.5em;
   margin-top: 1em;
   margin-bottom: 1em;
@@ -131,6 +147,7 @@ footer.fixed {
 }
 
 #experience .outer-exp-wrapper {
+  margin: 0.5em;
   padding: 0.5em;
 }
 
@@ -163,7 +180,7 @@ footer.fixed {
   }
 
   #experience section .brief {
-    min-width: 15em; /* TODO: Why does width not work? */
+    min-width: 15em;
   }
 }
 
@@ -173,22 +190,18 @@ footer.fixed {
   }
 
   #experience aside {
-    margin-right: 1em;
-    margin-left: 0;
-    width: 20em;
+    margin: 0.5em;
+    padding: 0.5em;
+    flex: 1 0 20em;
   }
 
-  #experience img.banner {
-    display: none;
-  }
-
-  #experience aside img {
-    display: block;
-    padding: 0.5em 0;
-  }
-
-  #experience aside .blurb {
+  #experience aside .blurb p {
     border: none;
+    padding: 0;
+  }
+
+  #experience h1 {
+    font-size: 2em;
   }
 }
 
@@ -215,8 +228,6 @@ footer.fixed {
 }
 
 #skills aside .blurb {
-  display: block;
-  padding: 0.5em;
   margin-top: 1em;
   margin-bottom: 1em;
   border-top: 2px solid black;
@@ -231,22 +242,7 @@ footer.fixed {
   flex-grow: 1;
 }
 
-#skills .caption-wrapper {
-  position: relative;
-}
-
-#skills section img {
-  opacity: 0.65;
-}
-
 #skills .caption {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 0.5em;
-  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65));
-  color: white;
   text-transform: uppercase;
   font-family: 'Archivo Black', sans-serif;
 }
