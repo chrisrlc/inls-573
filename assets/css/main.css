@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding:0;
+  box-sizing: border-box;
 }
 
 html {
@@ -16,7 +17,6 @@ body {
   position: relative;
   min-height: 100%;
   padding-bottom: 2.75em;
-  box-sizing: border-box;
 }
 
 header, footer {
@@ -31,6 +31,15 @@ h1, h2 {
 h1 {
   text-transform: uppercase;
   font-size: 3em;
+}
+
+h3 {
+  font-weight: 800;
+  font-size: 1.1em;
+}
+
+img {
+  max-width: 100%;
 }
 
 nav ul {
@@ -67,6 +76,12 @@ nav li a.selected:hover, li a.selected:focus {
   display: none;
 }
 
+aside {
+  text-align: center;
+  max-width: 32em;
+  margin: 0 auto;
+}
+
 footer {
   text-align: center;
   padding: 1em;
@@ -80,9 +95,100 @@ footer.fixed {
   bottom: 0;
 }
 
-@media (min-width: 32em) {
+@media (min-width: 31em) {
   .logo-text {
     display: inline;
+  }
+}
+
+/***********************/
+/* Experience Page CSS */
+/***********************/
+
+#experience h1 {
+  font-size: 2.5em;
+}
+
+#experience main {
+  padding: 0.5em;
+  max-width: 120em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#experience aside img {
+  display: none;
+}
+
+#experience aside .blurb {
+  display: block;
+  padding: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+#experience .outer-exp-wrapper {
+  padding: 0.5em;
+}
+
+#experience .inner-exp-wrapper {
+  padding-top: 0.75em;
+}
+
+#experience section {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.75em;
+}
+
+#experience section .brief {
+  margin-bottom: 0.75em;
+}
+
+#experience section .title {
+  font-weight: 700;
+}
+
+#experience section .status {
+  font-style: italic;
+  padding-top: 0.75em;
+}
+
+@media (min-width: 48em) {
+  #experience section {
+    flex-direction: row;
+  }
+
+  #experience section .brief {
+    min-width: 15em; /* TODO: Why does width not work? */
+  }
+}
+
+@media (min-width: 64em) {
+  #experience main {
+    flex-direction: row;
+  }
+
+  #experience aside {
+    margin-right: 1em;
+    margin-left: 0;
+    width: 20em;
+  }
+
+  #experience img.banner {
+    display: none;
+  }
+
+  #experience aside img {
+    display: block;
+    padding: 0.5em 0;
+  }
+
+  #experience aside .blurb {
+    border: none;
   }
 }
 
@@ -96,11 +202,6 @@ footer.fixed {
   text-align: center;
   padding: 0.5em;
   max-width: 120em;
-  margin: 0 auto;
-}
-
-#skills aside {
-  max-width: 32em;
   margin: 0 auto;
 }
 
@@ -135,7 +236,6 @@ footer.fixed {
 }
 
 #skills section img {
-  max-width: 100%;
   opacity: 0.65;
 }
 
