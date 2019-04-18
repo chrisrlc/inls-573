@@ -180,7 +180,7 @@ footer.fixed {
   }
 
   #experience section .brief {
-    min-width: 15em;
+    flex: 0 0 15em;
   }
 }
 
