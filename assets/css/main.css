@@ -45,7 +45,7 @@ img {
 nav ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -68,12 +68,20 @@ nav li a.selected:hover, li a.selected:focus {
   color: white;
 }
 
-.no-break {
-  display: inline-block;
+nav li.subpage {
+  display: none;
 }
 
-.logo-text {
-  display: none;
+nav li.menu-icon {
+  float: right;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+nav.open li {
+  display: block;
 }
 
 .caption-wrapper {
@@ -118,8 +126,17 @@ footer.fixed {
 }
 
 @media (min-width: 31em) {
-  .logo-text {
-    display: inline;
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  nav li.subpage {
+    display: block;
+  }
+
+  nav li.menu-icon {
+    display: none;
   }
 }
 

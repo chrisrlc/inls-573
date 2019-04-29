@@ -11,12 +11,13 @@
 </head>
 <body id="skills">
   <header>
-    <nav>
+    <nav id="topNav">
       <ul>
-        <li><a href="index.html"><i class="fas fa-cat"></i><span class="logo-text"> Severus Cortland-Haines</span></a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="skills.html" class="selected">Skills</a></li>
-        <li><a href="experience.html">Experience</a></li>
+        <li><a href="index.html"><i class="fas fa-cat"></i> Severus Cortland-Haines</a></li>
+        <li class="subpage"><a href="about.html">About</a></li>
+        <li class="subpage"><a href="skills.html" class="selected">Skills</a></li>
+        <li class="subpage"><a href="experience.html">Experience</a></li>
+        <li class="menu-icon"><a href="javascript:void(0);" onclick="openTopNav()"><i class="fa fa-bars"></i></a></li>
       </ul>
     </nav>
   </header>
@@ -96,5 +97,15 @@
   <footer class="fixed">
     <p>© 2019 Christina Cortland</p>
   </footer>
+  <script>
+    function openTopNav() {
+      var x = document.getElementById("topNav");
+      if (x.className !== "open") {
+        x.className = "open";
+      } else {
+        x.className = "";
+      }
+    }
+  </script>
 </body>
 </html>
